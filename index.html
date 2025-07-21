@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="burger" id="burger-menu" aria-label="Відкрити меню" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+            <nav class="nav">
+                <a href="#portfolio" class="nav__link">Портфоліо</a>
+                <a href="#about" class="nav__link">Про мене</a>
+                <a href="#contacts" class="nav__link">Контакти</a>
+            </nav>
+        </div>
+        <div class="logo">Kollabaaa</div>
+    </header>
+    <main>
+        <section id="portfolio" class="portfolio">
+            <div class="portfolio__filters">
+                <button class="filter-btn active" data-filter="all">Всі</button>
+                <button class="filter-btn" data-filter="web">Веб</button>
+                <button class="filter-btn" data-filter="design">Дизайн</button>
+                <button class="filter-btn" data-filter="photo">Фото</button>
+            </div>
+            <div class="portfolio__grid">
+                <div class="grid-sizer"></div>
+                <a href="https://arnika.organic" target="_blank" class="portfolio__item" data-category="web">
+                    <img src="assets/img/cover.png" alt="Web Project 1">
+                    <div class="portfolio__overlay">
+                        <div class="portfolio__title">Arnika Organic</div>
+                        <div class="portfolio__desc">Інтернет-магазин органічної продукції</div>
+                    </div>
+                </a>
+                <a href="https://fitplaza.pro" target="_blank" class="portfolio__item" data-category="design">
+                    <img src="assets/img/cover2.png" alt="Design Project 1">
+                    <div class="portfolio__overlay">
+                        <div class="portfolio__title">FitPlaza</div>
+                        <div class="portfolio__desc">Платформа для фітнесу та здоров'я</div>
+                    </div>
+                </a>
+                <a href="https://sushividkatiushi.com.ua" target="_blank" class="portfolio__item" data-category="photo">
+                    <img src="assets/img/cover3.png" alt="Photo Project 1">
+                    <div class="portfolio__overlay">
+                        <div class="portfolio__title">Sushi Vid Katiushi</div>
+                        <div class="portfolio__desc">Суші-бар, доставка їжі</div>
+                    </div>
+                </a>
+                <a href="https://ridnirechi.shop" target="_blank" class="portfolio__item" data-category="photo">
+                    <img src="assets/img/cover4.png" alt="Photo Project 1">
+                    <div class="portfolio__overlay">
+                        <div class="portfolio__title">Ridni Rechi</div>
+                        <div class="portfolio__desc">Магазин українських товарів</div>
+                    </div>
+                </a>
+                <a href="http://maystrinya.com" target="_blank" class="portfolio__item" data-category="photo">
+                    <img src="assets/img/cover5.png" alt="Photo Project 1">
+                    <div class="portfolio__overlay">
+                        <div class="portfolio__title">Майстриня</div>
+                        <div class="portfolio__desc">Творча майстерня</div>
+                    </div>
+                </a>
+                <a href="https://apps.apple.com/ua/app/brush-%D0%BF%D0%B5%D0%BD%D0%B7%D0%BB%D1%96-%D0%B4%D0%BB%D1%8F-procreate/id6447592475?l=uk
+                BRUSH: Пензлі для Procreate" target="_blank" class="portfolio__item" data-category="photo">
+                    <img src="assets/img/cover6.png" alt="Photo Project 1">
+                    <div class="portfolio__overlay">
+                        <div class="portfolio__title">BRUSH: Пензлі для Procreate</div>
+                        <div class="portfolio__desc">Додаток для художників</div>
+                    </div>
+                </a>
+                <a href="https://www.motoshop.ua/" target="_blank" class="portfolio__item" data-category="photo">
+                    <img src="assets/img/cover7.png" alt="Photo Project 1">
+                    <div class="portfolio__overlay">
+                        <div class="portfolio__title">Motoshop</div>
+                        <div class="portfolio__desc">Сайт мото</div>
+                    </div>
+                </a>
+            </div>
+        </section>
+        
+    </main>
+    <script src="assets/js/filters.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+</body>
+</html>

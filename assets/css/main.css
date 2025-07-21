@@ -1,0 +1,239 @@
+@charset "UTF-8";
+body {
+  font-family: "Montserrat", Arial, sans-serif;
+  background-color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 40px;
+  position: relative;
+}
+
+.burger {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  position: relative;
+}
+
+.burger span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #222;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #222;
+  margin-left: auto;
+}
+
+.nav {
+  display: flex;
+  gap: 32px;
+  margin: 0 auto;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 24px 32px;
+  display: none;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 180px;
+  z-index: 10;
+}
+
+.burger.active .nav {
+  display: flex;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #222;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+.nav__link:hover {
+  color: #007bff;
+}
+
+@media (max-width: 900px) {
+  .nav {
+    gap: 16px;
+  }
+}
+@media (min-width: 900px) {
+  .nav {
+    position: absolute;
+    top: 48px;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    padding: 24px 32px;
+    display: none;
+    flex-direction: column;
+    gap: 24px;
+    min-width: 180px;
+    z-index: 10;
+  }
+  .burger {
+    width: 32px;
+    height: 32px;
+    gap: 6px;
+    background: none;
+    box-shadow: none;
+  }
+  .burger span {
+    display: block;
+  }
+}
+.burger span {
+  transition: 0.3s;
+}
+
+.burger.active span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+.portfolio {
+  padding: 48px 40px;
+}
+
+.portfolio__filters {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.filter-btn {
+  padding: 8px 24px;
+  border: none;
+  background: #eee;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s;
+}
+.filter-btn.active, .filter-btn:hover {
+  background: #007bff;
+  color: #fff;
+}
+
+.portfolio__grid {
+  display: block;
+  position: relative;
+  /* Masonry керує позиціонуванням */
+}
+
+.grid-sizer,
+.portfolio__item {
+  width: calc(33.3333333333% - 40px);
+  margin-bottom: 40px;
+  margin-right: 40px;
+  float: left;
+  box-sizing: border-box;
+}
+
+.portfolio__item:nth-child(3) {
+  margin-right: 0;
+}
+
+@media (max-width: 900px) {
+  .grid-sizer,
+  .portfolio__item {
+    width: 48%;
+  }
+}
+@media (max-width: 600px) {
+  .grid-sizer,
+  .portfolio__item {
+    width: 100%;
+  }
+}
+.portfolio__item {
+  position: relative;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  display: block;
+  padding: 0;
+}
+.portfolio__item.portfolio__item--large {
+  height: 400px;
+}
+.portfolio__item.portfolio__item--medium {
+  height: 300px;
+}
+.portfolio__item.portfolio__item--small {
+  height: 200px;
+}
+.portfolio__item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 24px;
+}
+.portfolio__item .portfolio__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 20, 20, 0.7);
+  color: #fff;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s;
+  padding: 24px;
+  text-align: center;
+  pointer-events: none;
+  border-radius: 12px;
+}
+.portfolio__item:hover .portfolio__overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+.portfolio__item .portfolio__title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.portfolio__item .portfolio__desc {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.about, .contacts {
+  padding: 48px 40px;
+  background: #fff;
+  margin-top: 32px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
